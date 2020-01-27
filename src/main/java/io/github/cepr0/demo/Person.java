@@ -1,6 +1,5 @@
 package io.github.cepr0.demo;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,10 +18,6 @@ public class Person {
     @Id
     @GeneratedValue
     private Long id;
-
-    @JsonIgnore
-    @Version
-    private Short version;
 
     @Column(nullable = false, length = 32)
     private String name;
